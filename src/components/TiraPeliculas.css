@@ -1,0 +1,8 @@
+.lista li{
+    list-style: none;
+    color: red;
+}
+
+main{
+    background-color: lightblue;
+}

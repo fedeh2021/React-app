@@ -1,33 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
-import TiraPeliculas from './TiraPeliculas';
-import Gif from './Gif';
+
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Product from './components/Product';
+import NotFound from './components/NotFound';
+
+import {Link, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-<main>
-      <Gif/>
-      <TiraPeliculas titulo = 'Harry Potter'></TiraPeliculas>
-     <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
+    <div>
+    <Link to="/">Home</Link> <br/>
+    <Link to="/about">About</Link> <br/>
+    <Link to="/contact">Contacto</Link> <br/>
+   
+    <hr/>
+      
+    <Switch>
+    <Route exact path="/" component={Home}/>
+    <Route path="/about" component={About}/>
+    <Route path="/contact" component={Contact}/>
+    <Route path="/products/:id" component={Product}/>
+    <Route component={NotFound}/> 
+    </Switch>
+     </div>
 
-</main>
-      </header>
- 
-    </div>
   );
 }
 
 export default App;
-
-
-
-
