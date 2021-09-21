@@ -1,8 +1,12 @@
+import FrutasVersionFuncion from "./FrutasVersionFuncion";
+import RickMortyFn from "./RickMortyFn";
+
 function Contact(){
     return(
         <div>
             <h2>Soy la contact</h2>
-            <p>lorem</p>
+            <p><FrutasVersionFuncion></FrutasVersionFuncion></p>
+            <p><RickMortyFn/></p>
         </div>
     )
 }
